@@ -4,6 +4,8 @@
 		timer();
 	});	
 	function timer() {
+		$("#minute").attr("disabled", "disabled");
+		$("#second").attr("disabled", "disabled");
 		var minute = $("#minute").val();
 		var minuteseconds = minute * 60;
 		if($("#second").val() < 10) {
@@ -28,9 +30,14 @@
 		$("#minutecount").html(minute);
 		$("#secondcount").html(second);
 		var remainder = total % 60;
+
+	// Interval that makes the timer count down
 		var go = setInterval(function() {
-			if(total < 0) {
+			if(total <= 0) {
 				clearInterval(go);
+				alert("Time is up!");
+				$("#minute").removeAttr("disabled");
+				$("#second").removeAttr("disabled");
 			} else {
 				if(second == 0) {
 					console.log("We've reached zero");
@@ -39,7 +46,7 @@
 					second = 59;
 					total = total - 1;
 				} else {
-					if(second < 10) {
+					if(second <= 10) {
 						console.log(second);
 						$("#secondcount").html("0" + (second-1));
 						second = "0" + (second -1);
@@ -51,5 +58,8 @@
 				}
 			}
 		}, 1000);
+	}
+
+	function shoot() {
 	}
 })();
