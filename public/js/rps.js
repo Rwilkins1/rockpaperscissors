@@ -101,8 +101,10 @@
 		var options = ["Rock", "Paper", "Scissors"];
 		var random = Math.round(Math.random() * 2);
 		var botchoice = options[random];
-		$("#botchoice").css("background-image", "url(../img/" + botchoice + ".png)");
-		$("#yourchoice").html(choice);
+		var boturl = "/img/" + botchoice + ".png";
+		var yoururl = "/img/" + choice + ".png";
+		$("#botchoice").html("<img src=" + boturl + ">");
+		$("#yourchoice").html("<img src=" + yoururl + ">");
 		score(choice, botchoice);
 	}
 
