@@ -40,7 +40,7 @@
 		} else {
 			var second = $("#second").val();
 		}
-		var total = minuteseconds + second;
+		var total = parseInt(minuteseconds) + parseInt(second);
 
 	// If the user puts in more than 60 seconds, converts it into the appropriate amount of minutes and puts the remaining value in seconds
 		if(second >= 60) {
@@ -61,6 +61,7 @@
 
 	// Interval that makes the timer count down
 		var go = setInterval(function() {
+			console.log(total);
 			if(total <= 0) {
 				clearInterval(go);
 				$("#rock").attr("disabled", "disabled");

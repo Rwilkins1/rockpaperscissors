@@ -3,6 +3,19 @@ body {
 	margin-top: 100px;
 	background-image: url(/img/background.png);
 }
+#stats {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+#totalrounds {
+	margin-right: 8px;
+}
+#wins {
+	margin-right: 8px;
+}
+#draws {
+	margin-right: 8px;
+}
 #bot {
 	height: 100px;
 	width: 100px;
