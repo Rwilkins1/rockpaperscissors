@@ -72,14 +72,17 @@
 				whoWon();
 			} else {
 				if(second == 0) {
-					console.log("We've reached zero");
 					$("#minutecount").html(minute-1);
 					$("#secondcount").html("59");
 					second = 59;
 					total = total - 1;
 				} else {
 					if(second <= 10) {
-						console.log(second);
+						if(second == 10) {
+							$("#warning").css("opacity", 1);
+						} else {
+							$("#warning").css("opacity", 0);
+						}
 						$("#secondcount").html("0" + (second-1));
 						second = "0" + (second -1);
 					} else {
@@ -98,7 +101,7 @@
 		var options = ["Rock", "Paper", "Scissors"];
 		var random = Math.round(Math.random() * 2);
 		var botchoice = options[random];
-		$("#botchoice").html(botchoice);
+		$("#botchoice").css("background-image", "url(../img/" + botchoice + ".png)");
 		$("#yourchoice").html(choice);
 		score(choice, botchoice);
 	}
@@ -160,16 +163,4 @@
 			alert("Time is up! It is a Tie!");
 		}
 	}
-
-// Helps with the flexibility of the page
-	// function resizer(){
- //    var width = $(window).width();
- //    var height = $(window).height();
-
- //    	// $("#bot").css("margin-left", width/2.2);
- //    	// $("#you").css("margin-left", width/2.2);
- //    	console.log(width);
-	// };
-	// $(document).ready(resizer);
-	// $(window).resize(resizer); 
 })();

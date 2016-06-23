@@ -22,4 +22,6 @@ img {
 }
 #warning {
 	height: 20px;
+	opacity: 0;
+	color: red;
 }
