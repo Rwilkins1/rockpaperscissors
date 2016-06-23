@@ -1,14 +1,16 @@
 (function() {
 	"Use Strict";
 	$("#start").click(function() {
-		var minute = $("#minute").val();
-		var second = $("#second").val();
 		timer();
 	});	
 	function timer() {
 		var minute = $("#minute").val();
 		var minuteseconds = minute * 60;
-		var second = $("#second").val();
+		if($("#second").val() < 10) {
+			var second = "0" + $("#second").val();
+		} else {
+			var second = $("#second").val();
+		}
 		var total = minuteseconds + second;
 
 	// If the user puts in more than 60 seconds, converts it into the appropriate amount of minutes and puts the remaining value in seconds
@@ -26,15 +28,28 @@
 		$("#minutecount").html(minute);
 		$("#secondcount").html(second);
 		var remainder = total % 60;
-		console.log(remainder);
 		var go = setInterval(function() {
 			if(total < 0) {
 				clearInterval(go);
 			} else {
 				if(second == 0) {
-
+					console.log("We've reached zero");
+					$("#minutecount").html(minute-1);
+					$("#secondcount").html("59");
+					second = 59;
+					total = total - 1;
+				} else {
+					if(second < 10) {
+						console.log(second);
+						$("#secondcount").html("0" + (second-1));
+						second = "0" + (second -1);
+					} else {
+						$("#secondcount").html(second-1);
+						second = second - 1;
+					}
+					total = total - 1;
 				}
 			}
-		});
+		}, 1000);
 	}
 })();
