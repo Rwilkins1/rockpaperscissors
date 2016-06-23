@@ -33,7 +33,11 @@
 		$("#minute").attr("disabled", "disabled");
 		$("#second").attr("disabled", "disabled");
 		$("#start").attr("disabled", "disabled");
+        if($("#minute").val() == null) {
+            console.log("Nothing here");
+        }
 		var minute = $("#minute").val();
+        console.log(minute)
 		var minuteseconds = minute * 60;
 		if($("#second").val() < 10) {
 			var second = "0" + $("#second").val();
@@ -57,7 +61,6 @@
 	// Sets the values in the timer
 		$("#minutecount").html(minute);
 		$("#secondcount").html(second);
-		var remainder = total % 60;
 
 	// Interval that makes the timer count down
 		var go = setInterval(function() {

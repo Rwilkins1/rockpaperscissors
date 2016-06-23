@@ -5,30 +5,47 @@
 	<link rel="stylesheet" type="text/css" href="/css/rps.css">
 </head>
 <body>
+
+<!-- Inputs that determine the timer -->
 	<input type="number" name="minute" id="minute" placeholder="minute">
 	<input type="number" name="second" id="second" placeholder="second">
+
+<!-- Start/Restart button -->
 	<button id="start">Start the Game!</button>
+
+<!-- The visual representation of the timer -->
 	<div id="timer">
 		<span id="minutecount">0</span>:<span id="secondcount">00</span>
 	</div>
+
+<!-- Total number of rounds played, # of wins, # of draws, and # of losses -->
 	<div id="stats">
 		Total Rounds: <span id="totalrounds">0</span>
 		Wins: <span id="wins">0</span>
 		Draws: <span id="draws">0</span>
 		Losses: <span id="losses">0</span>
 	</div>
+
+<!-- Displays the choice that the bot makes -->
 	<div id="bot">
 		<span id="botchoice"></span>
 	</div>
+
+<!-- Warns the user when they have 10 seconds remaining and disappears afterwards -->
 	<div id="warning">10 Seconds Remaining</div>
+
+<!-- Displays the choice that you made -->
 	<div id="you">
 		<span id="yourchoice"></span>
 	</div>
+
+<!-- The choices you can make -->
 	<div id="options">
 		<button id="rock" disabled></button>
 		<button id="paper" disabled></button>
 		<button id="scissors" disabled></button>
 	</div>
+	
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/rps.js"></script>
 </body>

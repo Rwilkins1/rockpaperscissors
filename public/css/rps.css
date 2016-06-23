@@ -1,77 +1,99 @@
-body {
-	text-align: center;
-	margin-top: 100px;
-	background-image: url(/img/background.png);
-}
-#stats {
-	margin-bottom: 10px;
-	font-size: 20px;
-}
-#totalrounds {
-	margin-right: 8px;
-}
-#wins {
-	margin-right: 8px;
-}
-#draws {
-	margin-right: 8px;
-}
-#bot {
-	height: 100px;
-	width: 100px;
-	border: 5px solid black;
-	margin-bottom: 2%;
-	/*margin-left: 580px;*/
-	margin: auto;
-}
-#you {
-	height: 100px;
-	width: 100px;
-	border: 5px solid black;
-	margin: auto;
-	/*margin-left: 45%;*/
-}
-img {
-	height: 100px;
-	width: 100px;
-}
-#warning {
-	height: 20px;
-	opacity: 0;
-	color: red;
-}
-#timer {
-	font-family: Pocket Calculator OT;
-	font-size: 60px;
-	color: red;
-	background-color: black;
-	margin-left: 35%;
-	margin-right: 35%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border: 5px double gray;
-}
-#rock {
-	height: 40px;
-	width: 80px;
-	margin-top: 10px;
-	background-image: url(/img/rock.png);
-	background-position: center;
-	background-size: 80px 40px;
-}
-#paper {
-	height: 40px;
-	width: 80px;
-	margin-top: 10px;
-	background-image: url(/img/paper.png);
-	background-position: center;
-	background-size: 80px 40px;
-}
-#scissors {
-	height: 40px;
-	width: 80px;
-	margin-top: 10px;
-	background-image: url(/img/scissors.png);
-	background-position: center;
-	background-size: 80px 40px;
-}
+/*Uniform css for the whole document*/
+	
+	body {
+		text-align: center;
+		margin-top: 100px;
+		background-image: url(/img/background.png);
+	}
+
+	img {
+		height: 100px;
+		width: 100px;
+	}
+
+/*Styling for the Timer*/
+
+	#timer {
+		font-family: Pocket Calculator OT;
+		font-size: 60px;
+		color: red;
+		background-color: black;
+		margin-left: 35%;
+		margin-right: 35%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 5px double gray;
+	}
+
+/*CSS for the stats block and individual items within it*/
+	
+	#stats {
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+
+	#totalrounds {
+		margin-right: 8px;
+	}
+
+	#wins {
+		margin-right: 8px;
+	}
+
+	#draws {
+		margin-right: 8px;
+	}
+
+/*Styling for the bot's area*/
+
+	#bot {
+		height: 100px;
+		width: 100px;
+		border: 5px solid black;
+		margin-bottom: 2%;
+		margin: auto;
+	}
+
+/*Styling for the 10 second warning*/
+
+	#warning {
+		height: 20px;
+		opacity: 0;
+		color: red;
+	}
+
+/* Styling for your area and the buttons*/
+
+	#you {
+		height: 100px;
+		width: 100px;
+		border: 5px solid black;
+		margin: auto;
+	}
+
+	#rock {
+		height: 40px;
+		width: 80px;
+		margin-top: 10px;
+		background-image: url(/img/rock.png);
+		background-position: center;
+		background-size: 80px 40px;
+	}
+
+	#paper {
+		height: 40px;
+		width: 80px;
+		margin-top: 10px;
+		background-image: url(/img/paper.png);
+		background-position: center;
+		background-size: 80px 40px;
+	}
+	
+	#scissors {
+		height: 40px;
+		width: 80px;
+		margin-top: 10px;
+		background-image: url(/img/scissors.png);
+		background-position: center;
+		background-size: 80px 40px;
+	}
