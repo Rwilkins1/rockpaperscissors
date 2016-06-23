@@ -78,7 +78,7 @@
 					total = total - 1;
 				} else {
 					if(second <= 10) {
-						if(second == 10) {
+						if(total == 10) {
 							$("#warning").css("opacity", 1);
 						} else {
 							$("#warning").css("opacity", 0);

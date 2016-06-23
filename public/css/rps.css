@@ -1,5 +1,7 @@
 body {
 	text-align: center;
+	margin-top: 10%;
+	background-image: url(/img/background.png);
 }
 #bot {
 	height: 100px;
@@ -24,4 +26,12 @@ img {
 	height: 20px;
 	opacity: 0;
 	color: red;
+}
+#timer {
+	font-family: Pocket Calculator OT;
+	font-size: 60px;
+	color: red;
+	background-color: black;
+	margin-left: 35%;
+	margin-right: 35%;
 }
