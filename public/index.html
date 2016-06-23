@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/rps.css">
 </head>
 <body>
-	<input type="text" name="minute" id="minute" placeholder="minute">
-	<input type="text" name="second" id="second" placeholder="second">
+	<input type="number" name="minute" id="minute" placeholder="minute">
+	<input type="number" name="second" id="second" placeholder="second">
 	<button id="start">Start the Game!</button>
 	<div id="timer">
 		<span id="minutecount">0</span>:<span id="secondcount">00</span>
@@ -25,9 +25,9 @@
 		<span id="yourchoice"></span>
 	</div>
 	<div id="options">
-		<button id="rock" disabled>Rock</button>
-		<button id="paper" disabled>Paper</button>
-		<button id="scissors" disabled>Scissors</button>
+		<button id="rock" disabled></button>
+		<button id="paper" disabled></button>
+		<button id="scissors" disabled></button>
 	</div>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/rps.js"></script>

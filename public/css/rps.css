@@ -1,6 +1,6 @@
 body {
 	text-align: center;
-	margin-top: 10%;
+	margin-top: 100px;
 	background-image: url(/img/background.png);
 }
 #bot {
@@ -34,4 +34,31 @@ img {
 	background-color: black;
 	margin-left: 35%;
 	margin-right: 35%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 5px double gray;
+}
+#rock {
+	height: 40px;
+	width: 80px;
+	margin-top: 10px;
+	background-image: url(/img/rock.png);
+	background-position: center;
+	background-size: 80px 40px;
+}
+#paper {
+	height: 40px;
+	width: 80px;
+	margin-top: 10px;
+	background-image: url(/img/paper.png);
+	background-position: center;
+	background-size: 80px 40px;
+}
+#scissors {
+	height: 40px;
+	width: 80px;
+	margin-top: 10px;
+	background-image: url(/img/scissors.png);
+	background-position: center;
+	background-size: 80px 40px;
 }
