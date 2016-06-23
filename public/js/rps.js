@@ -160,4 +160,16 @@
 			alert("Time is up! It is a Tie!");
 		}
 	}
+
+// Helps with the flexibility of the page
+	// function resizer(){
+ //    var width = $(window).width();
+ //    var height = $(window).height();
+
+ //    	// $("#bot").css("margin-left", width/2.2);
+ //    	// $("#you").css("margin-left", width/2.2);
+ //    	console.log(width);
+	// };
+	// $(document).ready(resizer);
+	// $(window).resize(resizer); 
 })();

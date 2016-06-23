@@ -1,14 +1,25 @@
+body {
+	text-align: center;
+}
 #bot {
 	height: 100px;
 	width: 100px;
 	border: 5px solid black;
+	margin-bottom: 2%;
+	/*margin-left: 580px;*/
+	margin: auto;
 }
 #you {
 	height: 100px;
 	width: 100px;
 	border: 5px solid black;
+	margin: auto;
+	/*margin-left: 45%;*/
 }
 img {
 	height: 100px;
 	width: 100px;
+}
+#warning {
+	height: 20px;
 }
