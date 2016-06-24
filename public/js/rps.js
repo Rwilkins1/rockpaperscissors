@@ -1,6 +1,15 @@
 (function() {
 	"Use Strict";
 
+// Prevents the player from entering non-numeric characters in the inputs
+    $('#minute').on('change keyup', function() {
+      var sanitized = $(this).val().replace(/[^0-9]/g, '');
+      $(this).val(sanitized);
+    });
+    $('#second').on('change keyup', function() {
+        var sanitized = $(this).val().replace(/[^0-9]/g, '');
+        $(this).val(sanitized);
+    });
 // Sets the High Score if it exists
 if(localStorage.getItem("highscore") >= 1) {
     $("#high").html(localStorage.getItem("highscore"));
