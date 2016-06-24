@@ -6,16 +6,19 @@
       var sanitized = $(this).val().replace(/[^0-9]/g, '');
       $(this).val(sanitized);
     });
+
     $('#second').on('change keyup', function() {
         var sanitized = $(this).val().replace(/[^0-9]/g, '');
         $(this).val(sanitized);
     });
+
 // Sets the High Score if it exists
-if(localStorage.getItem("highscore") >= 1) {
-    $("#high").html(localStorage.getItem("highscore"));
-} else {
-    $("#high").html(0);
-}
+    if(localStorage.getItem("highscore") >= 1) {
+        $("#high").html(localStorage.getItem("highscore"));
+    } else {
+        $("#high").html(0);
+    }
+
 // The Buttons
 	$("#start").click(function() {
 		$("#start").html("Restart the Game!");
@@ -53,17 +56,21 @@ if(localStorage.getItem("highscore") >= 1) {
 		$("#minute").attr("disabled", "disabled");
 		$("#second").attr("disabled", "disabled");
 		$("#start").attr("disabled", "disabled");
-        if($("#minute").val() == null) {
-            console.log("Nothing here");
+        if($("#minute").val() == "") {
+            var minute = 0;
+        } else {
+    		var minute = $("#minute").val();
         }
-		var minute = $("#minute").val();
-        console.log(minute)
 		var minuteseconds = minute * 60;
-		if($("#second").val() < 10) {
-			var second = "0" + $("#second").val();
-		} else {
-			var second = $("#second").val();
-		}
+        if($("#second").val() == "") {
+            var second = 30;
+        } else {
+    		if($("#second").val() < 10) {
+    			var second = "0" + $("#second").val();
+    		} else {
+    			var second = $("#second").val();
+    		}
+        }
 		var total = parseInt(minuteseconds) + parseInt(second);
 
 	// If the user puts in more than 60 seconds, converts it into the appropriate amount of minutes and puts the remaining value in seconds
@@ -196,6 +203,8 @@ if(localStorage.getItem("highscore") >= 1) {
 			alert("Time is up! You lost!");
 		} else if(draws > wins && draws > losses) {
 			alert("Time is up! It is a Tie!");
-		}
+		} else {
+            alert("Time is up! The game is not a win, loss, or tie!");
+        }
 	}
 })();
