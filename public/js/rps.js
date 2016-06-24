@@ -1,6 +1,12 @@
 (function() {
 	"Use Strict";
 
+// Sets the High Score if it exists
+if(localStorage.getItem("highscore") >= 1) {
+    $("#high").html(localStorage.getItem("highscore"));
+} else {
+    $("#high").html(0);
+}
 // The Buttons
 	$("#start").click(function() {
 		$("#start").html("Restart the Game!");
@@ -10,6 +16,11 @@
 		$("#losses").html("0");
 		timer();
 	});	
+
+    $("#clear").click(function() {
+        localStorage.clear();
+        $("#high").html(0);
+    });
 
 	$("#rock").click(function() {
 		shoot("Rock");
@@ -161,6 +172,11 @@
 		var wins = parseInt($("#wins").html());
 		var draws = parseInt($("#draws").html());
 		var losses = parseInt($("#losses").html());
+        if($("#high").html() < wins) {
+            localStorage.setItem("highscore", wins);
+            $("#high").html(localStorage.getItem("highscore"));
+        }
+
 		if(wins > losses && wins > draws) {
 			alert("Time is up! You won!");
 		} else if(losses > wins && losses > draws) {

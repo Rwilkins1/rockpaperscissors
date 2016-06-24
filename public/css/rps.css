@@ -43,6 +43,9 @@
 	#draws {
 		margin-right: 8px;
 	}
+    /*#losses {
+        margin-right: 8px;
+    }*/
 
 /*Styling for the bot's area*/
 
@@ -88,7 +91,7 @@
 		background-position: center;
 		background-size: 80px 40px;
 	}
-	
+
 	#scissors {
 		height: 40px;
 		width: 80px;
