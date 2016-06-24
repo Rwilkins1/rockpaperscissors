@@ -59,16 +59,16 @@
         if($("#minute").val() == "") {
             var minute = 0;
         } else {
-    		var minute = $("#minute").val();
+    		var minute = $("#minute").val().replace(/^0+/, '');
         }
 		var minuteseconds = minute * 60;
         if($("#second").val() == "") {
             var second = 30;
         } else {
     		if($("#second").val() < 10) {
-    			var second = "0" + $("#second").val();
+    			var second = "0" + $("#second").val().replace(/^0+/, '');
     		} else {
-    			var second = $("#second").val();
+    			var second = $("#second").val().replace(/^0+/, '');
     		}
         }
 		var total = parseInt(minuteseconds) + parseInt(second);
