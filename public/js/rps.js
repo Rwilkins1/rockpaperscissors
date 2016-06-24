@@ -163,6 +163,8 @@ if(localStorage.getItem("highscore") >= 1) {
 				$("#draws").html(draws);
 			}
 		}
+
+    // Increases the count of the total rounds played by 1 every time this function is called
 		totalrounds = parseInt(totalrounds) + 1;
 		$("#totalrounds").html(totalrounds);
 	}
@@ -172,6 +174,8 @@ if(localStorage.getItem("highscore") >= 1) {
 		var wins = parseInt($("#wins").html());
 		var draws = parseInt($("#draws").html());
 		var losses = parseInt($("#losses").html());
+
+    // Sets a new high score if the amount of wins in this game is greater than the previous high score
         if($("#high").html() < wins) {
             localStorage.setItem("highscore", wins);
             $("#high").html(localStorage.getItem("highscore"));
