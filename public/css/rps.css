@@ -7,8 +7,8 @@
 	}
 
 	img {
-		height: 100px;
-		width: 100px;
+		height: 200px;
+		width: 200px;
 	}
 
 /*Styling for the Timer*/
@@ -50,11 +50,13 @@
 /*Styling for the bot's area*/
 
 	#bot {
-		height: 100px;
-		width: 100px;
+		height: 200px;
+		width: 200px;
 		border: 5px solid black;
 		margin-bottom: 2%;
 		margin: auto;
+        background-image: url(/img/bot.png);
+        background-position: center;
 	}
 
 /*Styling for the 10 second warning*/
@@ -68,10 +70,12 @@
 /* Styling for your area and the buttons*/
 
 	#you {
-		height: 100px;
-		width: 100px;
+		height: 200px;
+		width: 200px;
 		border: 5px solid black;
 		margin: auto;
+        background-image: url(/img/you.png);
+        background-position: center;
 	}
 
 	#rock {
