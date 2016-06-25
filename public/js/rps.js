@@ -107,7 +107,6 @@
 
 	// Interval that makes the timer count down
 		var go = setInterval(function() {
-			console.log(total);
 			if(total <= 0) {
 				clearInterval(go);
 				$("#rock").attr("disabled", "disabled");
