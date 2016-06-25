@@ -67,6 +67,7 @@
     		var minute = $("#minute").val().replace(/^0+/, '');
         }
 		var minuteseconds = minute * 60;
+
         if($("#second").val() == "") {
             var second = 30;
         } else {
@@ -82,6 +83,12 @@
         }
 		var total = parseInt(minuteseconds) + parseInt(second);
 
+    // One final check to make sure that the user doesn't put anything over an hour
+        if(total >= 3600) {
+            total = 3600;
+            minute = 60;
+            second = "00";
+        }
 	// If the user puts in more than 60 seconds, converts it into the appropriate amount of minutes and puts the remaining value in seconds
 		if(second >= 60) {
 			minute = (parseInt(minute) + parseInt(Math.floor(second / 60)));
