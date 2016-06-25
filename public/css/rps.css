@@ -59,12 +59,14 @@
         background-position: center;
 	}
 
-/*Styling for the 10 second warning*/
+/*Styling for the 10 second warning. Meant to definitely catch the player's attention without interrupting the game*/
 
 	#warning {
-		height: 20px;
+		height: 30px;
+        font-size: 25px;
 		opacity: 0;
 		color: red;
+        background-color: yellow;
 	}
 
 /* Styling for your area and the buttons*/
