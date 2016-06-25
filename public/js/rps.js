@@ -20,6 +20,8 @@
     }
 
 // The Buttons
+
+    // Starts the game
 	$("#start").click(function() {
 		$("#start").html("Restart the Game!");
 		$("#totalrounds").html("0");
@@ -29,6 +31,7 @@
 		timer();
 	});	
 
+    // Clears the High Score
     $("#clear").click(function() {
         localStorage.clear();
         $("#high").html(0);
@@ -58,6 +61,8 @@
 		$("#start").attr("disabled", "disabled");
         if($("#minute").val() == "") {
             var minute = 0;
+        } else if($("#minute").val() == 0) { 
+            var minute = 0;
         } else {
     		var minute = $("#minute").val().replace(/^0+/, '');
         }
@@ -66,7 +71,11 @@
             var second = 30;
         } else {
     		if($("#second").val() < 10) {
-    			var second = "0" + $("#second").val().replace(/^0+/, '');
+                if($("#second").val() == 0) {
+                    var second = "00";
+                } else {
+        			var second = "0" + $("#second").val().replace(/^0+/, '');
+                }
     		} else {
     			var second = $("#second").val().replace(/^0+/, '');
     		}
